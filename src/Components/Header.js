@@ -21,7 +21,7 @@ function Header () {
 
             <div className="overlay"></div>
             <img src={`${toggle ? "/assets/shared/icon-close.svg": "/assets/shared/icon-hamburger.svg" }`}
-                className="d-block d-sm-none hamburger" onClick={()=>{setToggle(!toggle)}} 
+                className="d-block d-md-none hamburger" onClick={()=>{setToggle(!toggle)}} 
             />
         </header>
     );

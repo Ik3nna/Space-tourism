@@ -4,7 +4,121 @@
     --space: #ffffff;
     --explore: #0B0D17;
 }
-body {
-    background-color: var(--background-color);
+.container {
+    margin-top: 20vh;
+}
+p:first-of-type {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.725px;
+    color: var(--text);
+    line-height: 34px;
+}
+h2 {
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 172px;
+    color: var(--space);
+}
+p:last-child {
+    font-family: 'Barlow'sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--text);
+    width: 450px;
+}
+.wrapper {
+    cursor: pointer;
+}
+.explore-container {
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    background-color: var(--space);
+    margin: auto;
+    position: relative;
+}
+.explore {
+    color: var(--explore);
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        margin-top: 7vh;
+    }
+    p:first-of-type {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 3.375px;
+    }
+    h2 {
+        line-height: 150px;
+        font-size: 150px;
+        text-align: center;
+    }
+    p:last-child {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        width: 400px;
+        margin: auto;
+    }
+    .wrapper {
+        margin-top: 20vh;
+    }
+    .explore-container {
+        width: 242px;
+        height: 242px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        margin-top: 10vh;
+    }
+    p:first-of-type {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 2.7px;
+    }
+    h2 {
+        font-size: 80px;
+        line-height: 100px;
+        text-align: center;
+    }
+    p:last-child {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+    .wrapper {
+        margin-top: 15vh;
+    }
+    .explore-container {
+        width: 150px;
+        height: 150px;
+    }
+    .explore {
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 1.25px;
+    }
+}
