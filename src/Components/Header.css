@@ -59,12 +59,11 @@ li {
         max-width: 44px;
     }
     hr {
-        left: 6%;
+        left: 7%;
         width: 30%;
     }
     nav {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding: 8px 6% 8px 7%;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -75,14 +74,15 @@ li {
         max-width: 40px;
     }
     hr {
-        left: 3%;
+        left: 8%;
         width: 30%;
     }
     nav {
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding: 6px 0 6px 7%;
     }
-
+    li {
+        margin-right: 30px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     body {
@@ -162,5 +162,13 @@ li {
         width: 24px;
         height: 21px;
         z-index: 5;
+    }
+    .overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        
     }
 }
