@@ -33,6 +33,7 @@ main {
     color: #FFFFFF;
     padding-bottom: 20px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .active {
     border-bottom: 2px solid #ffffff;
@@ -59,6 +60,9 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+.last div {
+    margin-bottom: 30px;
+}
 .last div p:first-of-type {
     font-family: 'Barlow Condensed';
     font-size: 14px;
@@ -75,3 +79,139 @@ main {
 }
 
 
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .first img {
+        max-width: 420px;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .first {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        text-align: center;
+    }
+    .first p {
+        text-align: left;
+    }
+    .first img {
+        position: relative;
+        max-width: 300px;
+        width: 100%;
+        margin-top: 20px !important;
+    }
+    .wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .second h1 {
+        font-size: 80px;
+        line-height: 92px;
+        text-align: center;
+    }
+    .description {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .last div p:first-of-type {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 2.3625px;
+    }
+    .last div p:last-child {
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .first {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        text-align: center;
+    }
+    .first img {
+        position: relative;
+        max-width: 300px;
+        width: 100%;
+        margin-top: 20px !important;
+    }
+    .wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .second h1 {
+        font-size: 80px;
+        line-height: 92px;
+        text-align: center;
+    }
+    .description {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .last {
+        flex-direction: column;
+    }
+    .last div p:first-of-type {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 2.3625px;
+    }
+    .last div p:last-child {
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+    } 
+}
+@media (max-width: 575px) {
+    .first {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        text-align: center;
+    }
+    .first img {
+        position: relative;
+        max-width: 170px;
+        width: 100%;
+        margin-top: 20px !important;
+    }
+    .wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .second h1 {
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+    }
+    .description {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .last {
+        flex-direction: column;
+    }
+    .last div p:first-of-type {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 2.3625px;
+    }
+    .last div p:last-child {
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+    } 
+}

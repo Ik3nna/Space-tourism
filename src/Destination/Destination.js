@@ -53,7 +53,7 @@ function Destination () {
                     </Col>
 
                     <Col lg = {6} className={styles.second}>
-                        <Stack direction="horizontal" gap={5}>
+                        <Stack className={styles.wrapper} direction="horizontal" gap={5}>
                             {destination.map((item, index) => {
                                 return(
                                     <div key={item.id} onClick={()=> {setValue(index)}} className={`${styles.tabs}  ${index === value && styles.active}`}>

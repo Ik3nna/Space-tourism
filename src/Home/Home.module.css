@@ -41,6 +41,7 @@
     background-color: var(--space);
     margin: auto;
     position: relative;
+    margin-bottom: 30px;
 }
 .explore {
     color: var(--explore);
@@ -88,7 +89,38 @@
         height: 242px;
     }
 }
-@media (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        margin-top: 10vh;
+    }
+    .col1 p:first-of-type {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 3.375px;
+    }
+    .col1 h2 {
+        line-height: 150px;
+        font-size: 150px;
+        text-align: center;
+    }
+    .col1 p:last-child {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        width: 400px;
+        margin: auto;
+    }
+    .wrapper {
+        margin-top: 20vh;
+    }
+    .exploreContainer {
+        width: 242px;
+        height: 242px;
+    }
+
+}
+@media (max-width: 575px) {
     .container {
         margin-top: 10vh;
     }
