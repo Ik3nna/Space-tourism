@@ -3,48 +3,50 @@
     --text: hsl(0, 0%, 100%);
     --overlay: hsl(0, 0%, 0%);
 }
-body {
+.header {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
 }
-img {
+.header img:first-of-type {
     max-width: 48px;
     width: 100%;
     margin-left: 3%;
     cursor: pointer;
     margin-top: 20px;
 }
-hr {
+.header hr {
     background-color: var(--text);
     height: 1px;
     border: none;
-    width: 35%;
+    width: 36%;
     margin: 20px auto 0px;
     position: relative;
     z-index: 5;
-    left: 8%;
+    left: 7%;
 }
-nav {
+.header nav {
     background-color: var(--linksBackground);
     backdrop-filter: blur(40.7742px);
-    padding: 10px 8% 10px 6%;
+    padding: 10px 3% 10px 5%;
     margin-left: auto;
     position: relative;
     margin-top: 20px;
 }
-li {
+.header li {
     color: var(--text);
     margin-right: 40px;
     margin-top: 15px;
 }
 .links {
     color: var(--text);
-    padding-bottom: 25px;
+    padding-bottom: 23px;
 }
-.active-link {
-    border-bottom: 2px solid var(--text);
+.activeLink {
+    border-bottom: 3px solid var(--text);
 }
 .links span {
     margin-right: 10px;
@@ -55,50 +57,57 @@ li {
 }
 
 
-
+@media (min-width: 1400px) {
+    .header hr {
+        left: 12%;
+    }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
-    img {
+    .header img:first-of-type {
         max-width: 44px;
     }
-    hr {
+    .header hr {
         left: 7%;
-        width: 30%;
+        width: 33%;
     }
-    nav {
-        padding: 8px 6% 8px 6%;
+    .header nav {
+        padding: 8px 0% 8px 6%;
+    }
+    .header li {
+        margin-right: 30px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 16px;
-    }
-    header {
+    .header {
         justify-content: space-between;
     }
-    img {
+    .header img:first-of-type {
         max-width: 44px;
         margin-top: 0;
     }
-    hr {
+    .header hr {
         display: none;
     }
-    nav {
+    .header nav {
         padding: 8px 0 8px 20px;
         margin-top: 0;
+    }
+    .links {
+        padding-bottom: 20px;
     }
     
 }
 @media (max-width: 767px) {
-    header {
+    .header {
         justify-content: space-between;
     }
-    img {
+    .header img:first-of-type {
         max-width: 40px;
     }
-    hr {
+    .header hr {
         display: none;
     }
-    nav {
+    .header nav {
         position: fixed;
         padding: 0;
         margin: 0;
@@ -111,33 +120,33 @@ li {
         transition: 0.1s ease-out;
         z-index: 5;
     }
-    .active-link {
+    .activeLink {
         border: none;
     }
     .active nav {
         transition: 0.2s ease-in;
         transform: translateX(0);
     }
-    nav ul {
+    .header nav ul {
         flex-direction: column;
         margin-top: 80px;
     }
-    nav li:nth-of-type(1) {
+    .header nav li:nth-of-type(1) {
         position: absolute;
         top: 15%;
         left: 10%;
     }
-    nav li:nth-of-type(2) {
+    .header nav li:nth-of-type(2) {
         position: absolute;
         left: 10%;
         top: 25%
     }
-    nav li:nth-of-type(3) {
+    .header nav li:nth-of-type(3) {
         position: absolute;
         top: 35%;
         left: 10%;
     }
-    nav li:nth-of-type(4) {
+    .header nav li:nth-of-type(4) {
         position: absolute;
         left: 10%;
         top: 45%
@@ -145,7 +154,7 @@ li {
     .hamburger {
         cursor: pointer;
         position: absolute;
-        top: 10px;
+        top: 30px;
         right: 3%;
         width: 24px;
         height: 21px;

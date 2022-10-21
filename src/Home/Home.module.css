@@ -6,8 +6,9 @@
 }
 .container {
     margin-top: 20vh;
+    text-transform: uppercase;
 }
-p:first-of-type {
+.col1 p:first-of-type {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     font-weight: 400;
@@ -15,25 +16,25 @@ p:first-of-type {
     color: var(--text);
     line-height: 34px;
 }
-h2 {
+.col1 h2 {
     font-family: 'Bellefair', serif;
     font-weight: 400;
     font-size: 150px;
     line-height: 172px;
     color: var(--space);
 }
-p:last-child {
+.col1 p:last-child {
     font-family: 'Barlow'sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
     color: var(--text);
-    width: 450px;
+    width: 500px;
 }
 .wrapper {
     cursor: pointer;
 }
-.explore-container {
+.exploreContainer {
     width: 274px;
     height: 274px;
     border-radius: 50%;
@@ -59,20 +60,20 @@ p:last-child {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .container {
-        margin-top: 7vh;
+        margin-top: 10vh;
     }
-    p:first-of-type {
+    .col1 p:first-of-type {
         font-size: 20px;
         line-height: 24px;
         text-align: center;
         letter-spacing: 3.375px;
     }
-    h2 {
+    .col1 h2 {
         line-height: 150px;
         font-size: 150px;
         text-align: center;
     }
-    p:last-child {
+    .col1 p:last-child {
         font-size: 16px;
         line-height: 28px;
         text-align: center;
@@ -82,7 +83,7 @@ p:last-child {
     .wrapper {
         margin-top: 20vh;
     }
-    .explore-container {
+    .exploreContainer {
         width: 242px;
         height: 242px;
     }
@@ -91,18 +92,18 @@ p:last-child {
     .container {
         margin-top: 10vh;
     }
-    p:first-of-type {
+    .col1 p:first-of-type {
         font-size: 16px;
         line-height: 19px;
         text-align: center;
         letter-spacing: 2.7px;
     }
-    h2 {
+    .col1 h2 {
         font-size: 80px;
         line-height: 100px;
         text-align: center;
     }
-    p:last-child {
+    .col1 p:last-child {
         font-size: 15px;
         line-height: 25px;
         text-align: center;
@@ -112,7 +113,7 @@ p:last-child {
     .wrapper {
         margin-top: 15vh;
     }
-    .explore-container {
+    .exploreContainer {
         width: 150px;
         height: 150px;
     }

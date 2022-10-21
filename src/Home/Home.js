@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
-import "./Home.css";
+import styles from "./Home.module.css";
 
 function Home () {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -40,9 +40,9 @@ function Home () {
             
             <Header /> 
 
-            <Container>
+            <Container className={styles.container}>
                 <Row>
-                    <Col lg={6}>
+                    <Col lg={6} className={styles.col1}>
                         <p>
                             So, you want to travel to
                         </p>
@@ -56,9 +56,9 @@ function Home () {
                         </p>
                     </Col>
 
-                    <Col lg={6} className="wrapper">
-                        <div className="explore-container">
-                            <div className="explore">explore</div>
+                    <Col lg={6} className={styles.wrapper}>
+                        <div className={styles.exploreContainer}>
+                            <div className={styles.explore}>explore</div>
                         </div>
                     </Col>
                 </Row>
