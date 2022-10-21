@@ -8,8 +8,6 @@ function Header () {
 
     const active = toggle ? styles.active : null;
 
-    const activeStyle = { borderBottom: "3px solid #ffffff"};
-
     return(
         <header className={`d-flex align-items-center ${styles.header} ${active}`}>
             <img src="/assets/shared/logo.svg" alt="logo" /> <hr />
@@ -21,7 +19,7 @@ function Header () {
 
                         return(
                             <li key={id}>
-                                <NavLink style={({ isActive }) => isActive ? activeStyle : null } className={`text-decoration-none ${styles.links}`} to={linkTo}>
+                                <NavLink className={({ isActive }) => isActive ? styles.activeLink : null} to={linkTo}>
                                     <span>{number}</span>{text}
                                 </NavLink>
                             </li>

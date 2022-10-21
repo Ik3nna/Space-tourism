@@ -41,18 +41,18 @@
     margin-right: 40px;
     margin-top: 15px;
 }
-.links {
+.header a {
     color: var(--text);
     padding-bottom: 23px;
+    text-decoration: none;
 }
 .activeLink {
     border-bottom: 3px solid var(--text);
 }
-
-.links span {
+.header a span {
     margin-right: 10px;
 }
-.links:hover {
+.header a:hover {
     opacity: 0.75;
     color: var(--text);
 }
@@ -93,7 +93,7 @@
         padding: 8px 0 8px 20px;
         margin-top: 0;
     }
-    .links {
+    .header a {
         padding-bottom: 20px;
     }
     
