@@ -48,6 +48,7 @@
 .activeLink {
     border-bottom: 3px solid var(--text);
 }
+
 .links span {
     margin-right: 10px;
 }

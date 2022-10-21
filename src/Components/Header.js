@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { links } from "../data";
 
 function Header () {
     const [toggle, setToggle] = useState(false);
 
-    useEffect(()=>{
-        const links = document.querySelectorAll(".links");
-
-        links.forEach((link)=>{
-            link.addEventListener("click", (e)=>{
-                const value = e.currentTarget;
-
-                links.forEach((item)=>{
-                    if (value === item) {
-                        item.classList.add("active-link");
-                    } else {
-                        item.classList.remove("active-link");
-                    }
-                });
-            });
-        });
-    },[]);
-
     const active = toggle ? styles.active : null;
+
+    const activeStyle = { borderBottom: "3px solid #ffffff"};
 
     return(
         <header className={`d-flex align-items-center ${styles.header} ${active}`}>
@@ -31,10 +16,17 @@ function Header () {
 
             <nav>
                 <ul className="list-unstyled d-flex align-items-center">
-                    <li><Link className={`text-decoration-none ${styles.links} ${styles.activeLink}`} to="/"><span>00</span> Home</Link></li>
-                    <li><Link className={`text-decoration-none ${styles.links}`} to="/destination"><span>01</span>Destination</Link></li>
-                    <li><Link className={`text-decoration-none ${styles.links}`} to="/crew"><span>02</span>Crew</Link></li>
-                    <li><Link className={`text-decoration-none ${styles.links}`} to="/technology"><span>03</span>Technology</Link></li>
+                    {links.map((link)=>{
+                        const { id, linkTo, number, text } = link;
+
+                        return(
+                            <li key={id}>
+                                <NavLink style={({ isActive }) => isActive ? activeStyle : null } className={`text-decoration-none ${styles.links}`} to={linkTo}>
+                                    <span>{number}</span>{text}
+                                </NavLink>
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
 

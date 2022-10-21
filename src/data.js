@@ -1,3 +1,30 @@
+export const links = [
+    {
+        id: 1,
+        linkTo: "/",
+        number: "00",
+        text: "home"
+    },
+    {
+        id: 2,
+        linkTo: "/destination",
+        number: "01",
+        text: "destination"
+    },
+    {
+        id: 3,
+        linkTo: "/crew",
+        number: "02",
+        text: "crew"
+    },
+    {
+        id: 4,
+        linkTo: "/technology",
+        number: "03",
+        text: "technology"
+    }
+]
+
 export const destination = [
     {
         id: 1,

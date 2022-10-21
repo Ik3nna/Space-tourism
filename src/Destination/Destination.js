@@ -49,7 +49,7 @@ function Destination () {
                     <Col lg = {6} className={styles.first}>
                         <p className="mb-5 mt-5"><span>01</span>pick your destination</p>
 
-                        <img src={images.png} alt="name" className="mt-5" />
+                        <img src={images.png} alt="name" className="mt-3" />
                     </Col>
 
                     <Col lg = {6} className={styles.second}>

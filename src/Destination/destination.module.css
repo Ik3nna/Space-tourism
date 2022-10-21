@@ -80,12 +80,7 @@ main {
 
 
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    .first img {
-        max-width: 420px;
-        width: 100%;
-    }
-}
+
 @media (min-width: 768px) and (max-width: 991px) {
     .first {
         font-size: 20px;
