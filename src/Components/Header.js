@@ -6,10 +6,8 @@ import { links } from "../data";
 function Header () {
     const [toggle, setToggle] = useState(false);
 
-    const active = toggle ? styles.active : null;
-
     return(
-        <header className={`d-flex align-items-center ${styles.header} ${active}`}>
+        <header className={`d-flex align-items-center ${styles.header} ${toggle ? styles.active : null}`}>
             <img src="/assets/shared/logo.svg" alt="logo" /> <hr />
 
             <nav>
