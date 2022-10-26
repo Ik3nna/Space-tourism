@@ -3,14 +3,10 @@ import Header from "../Components/Header";
 import { Container, Row, Col, Stack } from "react-bootstrap"; 
 import { destination } from "../data";
 import styles from "./destination.module.css";
+import { useGlobalContext } from "../context";
 
 function Destination () {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [value, setValue] = useState(0);
-
-    const resize = ()=> {
-        setScreenWidth(window.innerWidth);
-    }
+    const { screenWidth, value, setValue } = useGlobalContext();
 
     const getBackground = (screenWidth)=> {
         if (screenWidth > 991) {
@@ -23,12 +19,6 @@ function Destination () {
             return `url(${process.env.PUBLIC_URL + "/assets/destination/background-destination-mobile.jpg"})`
         }
     }
-
-    useEffect(()=>{
-        window.addEventListener("resize", resize);
-
-        resize();
-    },[]);
 
     const { name, images, description, distance, travel } = destination[value];
 

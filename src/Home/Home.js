@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Home.module.css";
+import { useGlobalContext } from "../context";
 
 function Home () {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-    const resize = ()=> {
-        setScreenWidth(window.innerWidth);
-    }
+    const { screenWidth } = useGlobalContext();
 
     const getBackground = (screenWidth)=> {
         if (screenWidth > 991) {
@@ -21,12 +18,6 @@ function Home () {
             return `url(${process.env.PUBLIC_URL + "/assets/home/background-home-mobile.jpg"})`
         }
     }
-
-    useEffect(()=>{
-        window.addEventListener("resize", resize);
-
-        resize();
-    },[]);
 
     return(
         <main style={{ 

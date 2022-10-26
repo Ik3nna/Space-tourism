@@ -3,19 +3,15 @@ import Header from "../Components/Header";
 import { Container, Row, Col, Carousel } from "react-bootstrap"; 
 import { crew } from "../data";
 import styles from "./Crew.module.css";
-
+import { useGlobalContext } from "../context";
 
 function Crew() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [index, setIndex] = useState(0);
+  const { screenWidth } = useGlobalContext();
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-
-  const resize = ()=> {
-    setScreenWidth(window.innerWidth);
-  }
 
   const getBackground = (screenWidth)=> {
     if (screenWidth > 991) {
@@ -28,12 +24,6 @@ function Crew() {
       return `url(${process.env.PUBLIC_URL + "/assets/crew/background-crew-mobile.jpg"})`
     }
   }
-
-  useEffect(()=>{
-    window.addEventListener("resize", resize);
-
-    resize();
-  },[]);
 
   return(
     <main className={styles.main} style={{ 

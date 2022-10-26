@@ -60,8 +60,8 @@
 }
 .last {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 .last div {
     margin-bottom: 30px;
@@ -83,7 +83,11 @@
 
 
 
-
+@media (min-width: 992px) and (max-width: 1199px) {
+   .last div {
+    margin-right: -15%;
+   }
+}
 @media (min-width: 768px) and (max-width: 991px) {
     .first {
         font-size: 20px;

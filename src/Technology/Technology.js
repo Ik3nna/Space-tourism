@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
 import { technology } from "../data";
 import styles from "./Technology.module.css";
+import { useGlobalContext } from "../context";
 
 function Technology () {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [value, setValue] = useState(0);
-
-    const resize = ()=> {
-        setScreenWidth(window.innerWidth);
-    }
+    const { screenWidth, value, setValue } = useGlobalContext();
 
     const getBackground = (screenWidth)=> {
         if (screenWidth > 991) {
@@ -23,12 +19,6 @@ function Technology () {
             return `url(${process.env.PUBLIC_URL + "/assets/technology/background-technology-mobile.jpg"})`
         }
     }
-
-    useEffect(()=>{
-        window.addEventListener("resize", resize);
-
-        resize();
-    },[]);
 
     const { name, images, description } = technology[value];
 
