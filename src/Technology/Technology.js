@@ -46,8 +46,8 @@ function Technology () {
 
             <Container>
                 <Row>
-                    <Col lg={6}>
-                        <p className={`${styles.para} mb-5 mt-5`}><span>03</span>space lanch 101</p>
+                    <Col xs={{ order: "last" }} lg={{ span: 6, order: "first" }}>
+                        <p className={`${styles.para} mb-5 mt-5`}><span>03</span>space launch 101</p>
 
                         <section>
                             <article>
@@ -69,8 +69,8 @@ function Technology () {
                         </section>
                     </Col>
 
-                    <Col lg={6} className={styles.col2}>
-                        <img src={images.portrait} alt="img" />
+                    <Col xs={{ order: "first" }} lg={{ span: 6, order: "last"}} className={styles.col2}>
+                        {screenWidth > 991 ? <img src={images.portrait} alt="img" /> : <img src={images.landscape} alt="img" /> }
                     </Col>
                 </Row>
             </Container>

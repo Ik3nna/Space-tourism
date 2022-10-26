@@ -1,6 +1,3 @@
-main {
-    text-transform: uppercase;
-}
 
 /* First Column */
 .first {
@@ -10,6 +7,7 @@ main {
     line-height: 34px;
     letter-spacing: 4.725px;
     color: #ffffff;
+    text-transform: uppercase;
 }
 .first span {
     margin-right: 20px;
@@ -34,6 +32,7 @@ main {
     padding-bottom: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 .active {
     border-bottom: 2px solid #ffffff;
@@ -43,6 +42,7 @@ main {
     font-size: 100px;
     line-height: 115px;
     color: #FFFFFF;
+    text-transform: uppercase;
 }
 .second hr {
     height: 1px;
