@@ -48,6 +48,7 @@ function Crew() {
       <Header />
 
       <Carousel activeIndex={index} controls={false} onSelect={handleSelect}>
+      
         {crew.map((item)=>{
           const { id, name, images, role, bio } = item;
           
@@ -74,6 +75,7 @@ function Crew() {
             </Carousel.Item>
           );
         })}
+
       </Carousel>
 
     </main>
