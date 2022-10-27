@@ -36,8 +36,8 @@ function Crew() {
       }}>
             
       <Header />
-
-      <Carousel activeIndex={index} controls={false} onSelect={handleSelect}>
+      
+      <Carousel interval={3000} indicatorLabels= {["btn1","btn2","btn3","btn4"]} activeIndex={index} controls={false} onSelect={handleSelect}>
       
         {crew.map((item)=>{
           const { id, name, images, role, bio } = item;
@@ -46,7 +46,7 @@ function Crew() {
             <Carousel.Item key={id}>
               <Container>
                 <Row>
-                  <Col lg={6} className={styles.first}>
+                  <Col xs={{ order: "last" }} lg={{ span: 6, order: "first" }} className={styles.first}>
                     <p className="mb-5 mt-5"><span>02</span>meet your crew</p>
 
                     <h3>{role}</h3>
@@ -57,7 +57,7 @@ function Crew() {
                     </p>
                   </Col>
 
-                  <Col lg={6} className={styles.second}>
+                  <Col xs={{ order: "first" }} lg={{ span: 6, order: "last" }} className={styles.second}>
                     <img src={images.png} />
                   </Col>
                 </Row>

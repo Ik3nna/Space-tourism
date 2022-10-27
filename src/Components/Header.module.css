@@ -17,6 +17,8 @@
     margin-left: 3%;
     cursor: pointer;
     margin-top: 20px;
+    position: relative;
+    z-index: 5;
 }
 .header hr {
     background-color: var(--text);
@@ -27,6 +29,7 @@
     position: relative;
     z-index: 5;
     left: 7%;
+    opacity: 0.25;
 }
 .header nav {
     background-color: var(--linksBackground);
@@ -60,7 +63,7 @@
 
 @media (min-width: 1400px) {
     .header hr {
-        left: 12%;
+        left: 9%;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
