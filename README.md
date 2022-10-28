@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Ik3nna/Space-tourism
-- Live Site URL: https://space-tourism-mp.netlify.app/home
+- Live Site URL: https://space-tourism-mp.netlify.app
 
 ## My process
 
