@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Header from "../Components/Header";
 import { Container, Row, Col, Carousel } from "react-bootstrap"; 
 import { crew } from "../data";

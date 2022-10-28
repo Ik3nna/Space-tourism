@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 import { links } from "../data";
-import { motion } from "framer-motion";
 
 function Header () {
     const [toggle, setToggle] = useState(false);
