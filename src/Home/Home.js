@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Home.module.css";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 
 function Home () {
     const { screenWidth } = useGlobalContext();
@@ -20,41 +21,48 @@ function Home () {
     }
 
     return(
-        <main style={{ 
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            minHeight: "100vh", 
-            height: "100%",
-            backgroundImage: getBackground(screenWidth)
-            }}>
-            
-            <Header /> 
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 3 }}
+        >
+            <main style={{ 
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                minHeight: "100vh", 
+                height: "100%",
+                backgroundImage: getBackground(screenWidth)
+                }}>
+                
+                <Header /> 
 
-            <Container className={styles.container}>
-                <Row>
-                    <Col lg={6} className={styles.col1}>
-                        <p>
-                            So, you want to travel to
-                        </p>
+                <Container className={styles.container}>
+                    <Row>
+                        <Col lg={6} className={styles.col1}>
+                            <p>
+                                So, you want to travel to
+                            </p>
 
-                        <h2>space</h2>
+                            <h2>space</h2>
 
-                        <p>
-                            Let’s face it; if you want to go to space, you might as well genuinely go to 
-                            outer space and not hover kind of on the edge of it. Well sit back, and relax 
-                            because we’ll give you a truly out of this world experience!
-                        </p>
-                    </Col>
+                            <p>
+                                Let’s face it; if you want to go to space, you might as well genuinely go to 
+                                outer space and not hover kind of on the edge of it. Well sit back, and relax 
+                                because we’ll give you a truly out of this world experience!
+                            </p>
+                        </Col>
 
-                    <Col lg={6} className={styles.wrapper}>
-                        <div className={styles.exploreContainer}>
-                            <div className={styles.explore}>explore</div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </main>
+                        <Col lg={6} className={styles.wrapper}>
+                            <div className={styles.exploreContainer}>
+                                <div className={styles.explore}>explore</div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
+        </motion.div>
     );
 }
 

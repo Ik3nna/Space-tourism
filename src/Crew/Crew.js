@@ -4,6 +4,7 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { crew } from "../data";
 import styles from "./Crew.module.css";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 
 function Crew() {
   const [index, setIndex] = useState(0);
@@ -26,49 +27,56 @@ function Crew() {
   }
 
   return(
-    <main className={styles.main} style={{ 
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      minHeight: "100vh", 
-      height: "100%",
-      backgroundImage: getBackground(screenWidth)
-      }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    >
+      <main className={styles.main} style={{ 
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh", 
+        height: "100%",
+        backgroundImage: getBackground(screenWidth)
+        }}>
+              
+        <Header />
+        
+        <Carousel interval={3000} indicatorLabels= {["btn1","btn2","btn3","btn4"]} activeIndex={index} controls={false} onSelect={handleSelect}>
+        
+          {crew.map((item)=>{
+            const { id, name, images, role, bio } = item;
             
-      <Header />
-      
-      <Carousel interval={3000} indicatorLabels= {["btn1","btn2","btn3","btn4"]} activeIndex={index} controls={false} onSelect={handleSelect}>
-      
-        {crew.map((item)=>{
-          const { id, name, images, role, bio } = item;
-          
-          return(
-            <Carousel.Item key={id}>
-              <Container>
-                <Row>
-                  <Col xs={{ order: "last" }} lg={{ span: 6, order: "first" }} className={styles.first}>
-                    <p className="mb-5 mt-5"><span>02</span>meet your crew</p>
+            return(
+              <Carousel.Item key={id}>
+                <Container>
+                  <Row>
+                    <Col xs={{ order: "last" }} lg={{ span: 6, order: "first" }} className={styles.first}>
+                      <p className="mb-5 mt-5"><span>02</span>meet your crew</p>
 
-                    <h3>{role}</h3>
-                    <h2>{name}</h2>
+                      <h3>{role}</h3>
+                      <h2>{name}</h2>
 
-                    <p>
-                      {bio}
-                    </p>
-                  </Col>
+                      <p>
+                        {bio}
+                      </p>
+                    </Col>
 
-                  <Col xs={{ order: "first" }} lg={{ span: 6, order: "last" }} className={styles.second}>
-                    <img src={images.png} />
-                  </Col>
-                </Row>
-              </Container>
-            </Carousel.Item>
-          );
-        })}
+                    <Col xs={{ order: "first" }} lg={{ span: 6, order: "last" }} className={styles.second}>
+                      <img src={images.png} />
+                    </Col>
+                  </Row>
+                </Container>
+              </Carousel.Item>
+            );
+          })}
 
-      </Carousel>
+        </Carousel>
 
-    </main>
+      </main>
+    </motion.div>
   );
 }
 
