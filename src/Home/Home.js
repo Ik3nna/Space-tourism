@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Home.module.css";
 import { useGlobalContext } from "../context";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Home () {
     const { screenWidth } = useGlobalContext();
@@ -55,9 +56,11 @@ function Home () {
                         </Col>
 
                         <Col lg={6} className={styles.wrapper}>
-                            <div className={styles.exploreContainer}>
-                                <div className={styles.explore}>explore</div>
-                            </div>
+                            <Link to="/destination">
+                                <div className={styles.exploreContainer}>
+                                    <div className={styles.explore}>explore</div>
+                                </div>
+                            </Link>
                         </Col>
                     </Row>
                 </Container>
