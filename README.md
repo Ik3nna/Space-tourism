@@ -26,12 +26,18 @@ Users should be able to:
 
 ### Screenshot
 
+![screencapture-localhost-3000-home-2022-10-28-01_42_00](https://user-images.githubusercontent.com/101594456/198423325-2b8dec53-4dab-432b-b7c6-c8a3627487a7.png)
 
+![screencapture-localhost-3000-destination-2022-10-28-01_42_18](https://user-images.githubusercontent.com/101594456/198423377-d610b7ac-0bcc-4689-9c8b-8fe1bba6bfee.png)
+
+![screencapture-localhost-3000-crew-2022-10-28-01_42_32](https://user-images.githubusercontent.com/101594456/198423401-c4514909-9d0e-4c92-931d-d0c8b307e81e.png)
+
+![screencapture-localhost-3000-technology-2022-10-28-01_42_45](https://user-images.githubusercontent.com/101594456/198423448-42e33b45-9fa2-4561-8b1a-458c70986dae.png)
 
 ### Links
 
 - Solution URL: https://github.com/Ik3nna/Space-tourism
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://space-tourism-mp.netlify.app
 
 ## My process
 
